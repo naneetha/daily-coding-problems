@@ -1,0 +1,33 @@
+package DailyCodingProblem;
+
+public class GCD_LeetCode316 {
+
+
+	 public int subarrayGCD(int[] nums, int k) {
+	        int ans = 0;
+	        for (int i = 0; i < nums.length; i++) {
+	            int currGcd = nums[i];
+	            if(currGcd == k) // if element is equal to k, increment answer
+	                ans++;
+	            for (int j = i + 1; j < nums.length; j++) {
+	                if(nums[j] < k) // if nums[j] < k gcd can never be equal to k for this subarray
+	                    break;
+	                currGcd = gcd(nums[j], currGcd);
+	                System.out.println("i= "+nums[i]+"j = "+ nums[j] +"GCD : "+currGcd);
+	                if (currGcd == k)
+	                    ans++;
+	            }
+	        }
+	        return ans;
+	    }
+	    private int gcd(int a, int b)
+	    {
+	       if(b == 0) 
+	           return a;
+	        return gcd(b,a%b);
+	    }
+	    public static void main(String[] args) {
+			System.out.println(new GCD_LeetCode316().subarrayGCD(new int[] {3,3,4,1,2}, 1));
+	    	//System.out.println(new LeetCode316().gcd(6, 3));
+	    }
+}
