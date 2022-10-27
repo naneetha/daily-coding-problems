@@ -1,4 +1,4 @@
-package DailyCodingProblem;
+package Graph;
 
 public class NumberOfIslands {
 

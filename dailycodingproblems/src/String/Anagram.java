@@ -1,4 +1,4 @@
-package DailyCodingProblem;
+package String;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -81,7 +81,7 @@ public class Anagram {
 	}
 	
 	public static void main(String[] args) {
-		//System.out.println( new Anagram().isAnagram("cat", "act"));
+		System.out.println( new Anagram().isAnagram("cat", "act"));
 		System.out.println( new Anagram().findMissingLetter("cate", "act"));
 		
 	}

@@ -4,11 +4,7 @@ public class LongestPalindromeSubstring {
 	
 	int startIndex;
     int subStringlen;
-	
-	
-	
-	
-	
+    
 	private String solveProblemGreedy(String s) {
 	      if(s.length() < 2)
 	      {
